@@ -1,7 +1,8 @@
 import Data.Vect
 
 
--- Example 1 -- Every programming language begins with HelloWorld example
+-- Example 1 
+-- Every programming language begins with HelloWorld example
 main : IO ()
 main = putStrLn "Hello world"
 
@@ -478,7 +479,7 @@ toFormat (c :: chars) = case toFormat chars of
                           fmt => Lit (cast c) fmt
 
 printf : (fmt : String) -> PrintfType (toFormat (unpack fmt))
-printf fmt = printfFmt (toFormat (unpack fmt)) ""
+printf fmt = printfFmt _ ""
 
 
 -- Efficiency of printfFmt?
